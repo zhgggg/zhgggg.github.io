@@ -17,8 +17,6 @@ jobs:
       - name: Use Node.js 22
         uses: actions/setup-node@v4
         with:
-          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
-          # Ref: https://github.com/actions/setup-node#supported-version-syntax
           node-version: "22"
       - name: Cache NPM dependencies
         uses: actions/cache@v4
@@ -35,6 +33,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
   deploy:
     needs: build
     permissions:
@@ -47,8 +46,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-<<<<<<< HEAD
-        uses: actions/deploy-pages@v4
-=======
-        uses: actions/deploy-pages@v4
->>>>>>> e3a73ef4eceb6dbdca1afae04ff9e285d6853a72
+        uses: actions/deploy-pages@v4  # 这是第50行，已删除冲突标记
