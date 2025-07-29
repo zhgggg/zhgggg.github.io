@@ -1,5 +1,5 @@
 ---
-title: hexo常用命令
+title: Hexo常用命令
 date: 2025-07-29 20:17:53
 tags:
 ---
