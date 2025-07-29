@@ -1,0 +1,51 @@
+name: Hexo Build and Deploy
+
+on:
+  push:
+    branches:
+      - main  # 源码所在分支
+    paths:
+      - 'source/_posts/**'  # 监控文章目录变化
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive  # 重要！用于获取Hexo主题
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'  # Hexo推荐使用Node.js 18+
+
+    - name: Install Hexo CLI
+      run: npm install hexo-cli -g
+
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      id: cache
+      with:
+        path: |
+          node_modules
+          .cache
+        key: ${{ runner.os }}-hexo-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-hexo-
+
+    - name: Install dependencies
+      run: npm ci  # 比npm install更可靠
+
+    - name: Generate static files
+      run: hexo generate
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        publish_branch: gh-pages  # 部署到的分支
+        cname: yourdomain.com    # 如果有自定义域名
