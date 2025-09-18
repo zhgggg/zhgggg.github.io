@@ -97,7 +97,13 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: fluid
-
+plugins:
+    hexo-generator-feed
+    
+feed:
+    type: rss
+    path: rss.xml
+    limit: false
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
