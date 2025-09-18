@@ -9,7 +9,7 @@ tags:
   - Linux
 ---
 # 前言
-昨日备份本地文件时突然掉线，此前也有过类似情况，但是路由器手动指配ip地址后不再出现，查询社区帖子发现这种情况较为普遍，参考了别人提出的[解决方案](https://club.fnnas.com/forum.php?mod=viewthread&tid=28479)，特此记录
+昨日备份本地文件时突然掉线，此前也有过类似情况，但是路由器手动指配ip地址后不再出现，查询社区帖子发现这种情况较为普遍，参考了别人提出的[解决方案](https://club.fnnas.com/forum.php?mod=viewthread&tid=28479),记录一下
 
 
 # 死机情况描述
@@ -35,7 +35,7 @@ UUID=f384615e-7c71-43b0-876c-45e8f08cfa6e /boot                   ext4    defaul
 
 ~~~~
 把加载swap分区的那行记录注释掉即可
-~~~~~bash
+```bash
 #/dev/mapper/cl-swap     swap                    swap    defaults        0 0
-~~~~~~
+```
 随后重启机器即可
