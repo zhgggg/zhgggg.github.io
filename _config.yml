@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: RainyReverie
+title: zhg213 Blog
 subtitle: ''
 description: ''
 keywords:
-author: RainyReverie
+author: zhg213
 language: zh-CN 
 timezone: ''
 
@@ -100,10 +100,7 @@ theme: fluid
 plugins:
     hexo-generator-feed
     
-feed:
-    type: rss
-    path: rss.xml
-    limit: false
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
