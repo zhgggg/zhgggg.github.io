@@ -5,8 +5,6 @@ categories:
   - 折腾点啥
 tags:
   - Hexo
-  - 运维
-  - Linux
 ---
 
 # 添加所有更改（包括新文章）
