@@ -9,7 +9,7 @@ layout: about
 ---
 PGP公钥更新日期：2025-09-26
 
-点击下载： [zhg213_0xAAD5E186_sec.asc](https://zhg213.xyz//files/zhg213_0xAAD5E186_sec.asc)
+点击下载： [zhg213_0xAAD5E186_sec.asc](files/zhg213_0xAAD5E186_pub.asc)
 ```AWK
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
