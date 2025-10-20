@@ -1,5 +1,5 @@
 ---
-title: YOLO模型训练并在Maixcam上部署
+title: 路面裂缝检测模型训练并在Maixcam上部署
 date: 2025-10-17 21:51:49
 tags:
   - yolo
@@ -12,6 +12,8 @@ categories:
 ---
 
 # 方案
+任务是需要训练一个路面裂缝检测模型，并且跑起来
+
 这里使用yolov5s作为预训练模型，老演员没啥说的
 
 数据集采用[RDD2022](https://datasetninja.com/road-damage-detector)
@@ -250,7 +252,7 @@ categories:
 
 </details>
 
-
+ 
 ~~AI真是太好用了你们知道吗~~
 ## 训练
 (此处略过下载yolo，配置环境的部分，我是用的是yolov5 7.0,环境管理使用uv)
@@ -493,6 +495,8 @@ AWNN Tools v0.9.6 不认识 SiLU (也叫 Swish) 激活函数，导致转换 ncnn
             sys.exit(1)
     ```
 </details>
+
+# 部署在Maixcam
 
 # 总结
 这是我第一次训练yolo模型并量化部署在嵌入式平台
