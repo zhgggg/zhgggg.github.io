@@ -273,7 +273,7 @@ categories:
 回到终端，激活环境
 
 ```python
-python train.py --data RDD2022.yaml --epochs 600 --weights yolov5s.pt --batch-size 128 --imgsz 640 --workers 16 --patience 50 --cos-lr --save-period 25
+python train.py --data datasets/RDD2022/dataset.yaml --epochs 600 --weights yolov5s.pt --batch-size 128 --imgsz 640 --workers 16 --patience 50 --cos-lr --save-period 25
 ```
 愉快的开始训练
 ![train](../img/yolo_detect/image.png)
