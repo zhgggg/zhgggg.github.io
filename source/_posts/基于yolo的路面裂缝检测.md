@@ -311,6 +311,13 @@ python export.py --weights runs/train/exp3/weights/best.pt --include onnx
 
 # 踩坑记录
 假如你跟我的环境一样，按照上面的步骤操作，那么你最后的模型转换是绝对会失败的
+
+事实上Sipeed 有[文档教程](https://wiki.sipeed.com/maixpy/doc/zh/ai_model_converter/maixcam.html)来教你如何进行模型转换，但是我知道写这篇文章的时候才看到
+
+而且我比较懒，直接用的线上平台，结果出了更多麻烦
+
+这里建议先阅读文档，不要使用MaixHub提供的那个转换工具
+
 ## 原因分析
 ### 环境配置
 - maixhub提供的转换工具要求低版本的 ir_version，也就是需要安装旧版本的onnx库
