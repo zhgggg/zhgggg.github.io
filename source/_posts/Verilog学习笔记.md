@@ -3,9 +3,11 @@ title: Verilog笔记
 date: 2025-09-09 21:52:33
 categories:
   - 学习
+  - 笔记
 tags:
   - Verilog
   - FPGA
+  - 笔记
 ---
 ## Verilog练习资源
 
